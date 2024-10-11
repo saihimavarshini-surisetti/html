@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>university</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+ 
+    nav{
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav img{
+        border-radius: 160px;
+        height: 20vh;
+    }
+    .nav-bar{
+        flex: 1;
+        text-align: right;
+    }
+    .nav-bar ul li{
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+    .nav-bar ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 13px;
+        font-family: 'poppins',sans-serif;
+    }
+    .nav-bar ul li::after{
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #f44336;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+    .nav-bar ul li:hover:after{
+    width: 100%;
+    }
+    
+    nav .bi{
+        display: none;
+    }
+    nav .btn-close{
+        display: none;
+    }
+    .bts{
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        border: 2px solid white;
+        padding: 10px 30px;
+        font-size: 15px;
+        background: transparent;
+       position: relative;
+       cursor: pointer;
+     }
+     .bts:hover{
+        border:  2px solid #f44336;
+        background: #f44336;
+        transition: 1s;
+    }
+
+
+    @media(max-width: 700px){
+        .text-box h1{
+            font-size: 20px;
+        }
+        .text-box p{
+            font-size: 10px;
+        }
+        .nav-bar ul li{
+            display: block;
+        }
+        .nav-bar{
+            position:fixed;
+            background: #f44336;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+            transform: 1s;
+        }
+        nav .bi{
+            display: block;
+            color:#fff;
+            margin: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        nav .btn-close{
+            display: block;
+            margin: 10px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+        p{
+            color: #777;
+        }
+        .bts{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 2px solid white;
+            padding: 10px 30px;
+            font-size: 15px;
+            background: transparent;
+           position: relative;
+           cursor: pointer;
+         }
+         .bts:hover{
+            border:  2px solid #f44336;
+            background: #f44336;
+            transition: 1s;
+        }
+    }
+
+/*----------footer---------*/
+
+    .footer{
+        width: 100;
+        text-align: center;
+        padding: 30px 0;
+    }
+    .footer h4{
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    .icons .bi{
+        color: #f44336;
+        margin: 0 13px;
+        cursor: pointer;
+        padding: 18px 0;
+    }
+    .bi-heart{
+        color: #f44336;
+    }
+    p{
+        color: #777;
+    }
+
+
+
+/*----------About Us page---------*/
+    .sub-header{
+        height: 50vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(pics/grad.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+    }
+
+   /*----------blog---------*/
+   .black-bts{
+    border: 2px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+.black-bts:hover{
+    color: white;
+}
+
+
+   .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
+   @media(max-width: 700px)
+   {
+       .row{
+           flex-direction: column;
+       }
+       .sub-header h1{
+        font-size: 24px;
+       }
+   }
+   
+
+   .blog{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+   }
+   .blog-left{
+    flex-basis: 65%;
+   }
+   .blog-left img{
+    width: 100%;
+   }
+   .blog-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+   }
+   .blog-left p{
+    color: #999;
+    padding: 0;
+   }
+   .blog-right{
+    flex-basis: 32%
+   }
+   .blog-right h3{
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+    }  
+    .blog-right div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #555;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    .comment-box{
+        border: 2px solid #ccc;
+        margin: 50px 0;
+        padding: 10px 20px;
+    }
+    .comment-box h3{
+        text-align: left;
+    }
+    .comment-form input, .comment-form textarea{
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        background: #f0f0f0;
+    }
+    .comment-form button{
+        margin: 10px 0;
+    }
+   
+
+
+
+</style>
+<body>
+<section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="pics/logo2.jpg" alt="img is reloaded"></a>
+            <div class="nav-bar" id="navBar">
+                <button type="button" class="btn-close" onclick="hidemenu()"></button>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" onclick="showmenu()">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </nav>
+        <h1>Our Certificate & Online Programs For 2024</h1>
+
+</section>
+
+
+<!-----------blog content----------->
+ <section class="blog">
+    <div class="row">
+        <div class="blog-left">
+            <img src="pics/certificate.jpg" alt="">
+            <h2>Our Certificate & Online Programs For 2024</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Iure quaerat quis nisi facere beatae expedita atque, 
+                minus veniam consequatur magni sapiente saepe,
+                 itaque eius perspiciatis neque assumenda reiciendis. 
+                 Qui perspiciatis, impedit necessitatibus animi,
+                 fugiat quasidicta unde quibusdam debitis, </p>
+                 <br>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing el. 
+                    Aspernatur dignissimos labore laboriosam incidunt nemo
+                    temporibus aliquid assumenda perferendis quis impedita
+                    voluptatum ducimus repellat hic, voluptates totam rerum
+                    tenetur provident quam sed omnis maiores io. Voluptatum, 
+                    Cupiditate dolore vel, quos aliquam quia aut, ex, 
+                    esse nam nulla est minima?nisi facere beatae expedita a, 
+                    minus veniam consequatur magni sapiente saepe,
+                     itaque eius perspiciatis neque assumenda reiciendis. 
+                     Qui perspiciatis, impedit necessitatibus animi,
+                     fugiat quasidicta unde quibusdam debitis, 
+                 </p>
+                 <br>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Aspernatur dignissimos labore laboriosam incidunt nemo
+                    temporibus aliquid assumenda perferendis quis impedit
+                    voluptatum ducimus repellat hic, voluptates totam rerum  
+                    tenetur provident quam sed omnis maiores illo. Voluptatu. 
+                    Cupiditate dolore vel, quos aliquam quia aut, ex, 
+                    esse nam nulla est minima?nisi facere beatae expedita at, 
+                    minus veniam consequatur magni sapiente saepe,
+                     itaque eius perspiciatis neque assumenda reiciendis. 
+                     Qui perspici! 
+                 </p>
+                 <br>
+                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Omnis voluptatum beatae enim atque doloremque,  adipis
+                    eveniet deserunt id laboriosam mollitia reiciendis, 
+                    cumque eaque distinctio nostrum rem eum?
+                    Totam cum explicabo expedita quibusdam,
+                    fugiat voluptates unde suscipit beatae quos nobis.
+                     Rerum tempore odio ut.</p>
+
+
+                    <div class="comment-box">
+                        <h3>Leave a comment</h3>
+
+
+                        <form class="comment-form">
+                            <input type="text" id="" placeholder="Enter Name">
+                            <input type="email" id="" placeholder="Enter Email">
+                            <textarea rows="5" placeholder="your comment"></textarea>
+                            <button type="button" class="bts black-bts">POST COMMENT</button>
+
+                        </form>
+                    </div>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="blog-right">
+            <h3>Post Categories</h3>
+            <div>
+                <span>Business Analytics</span>
+                <span>21</span>
+            </div>
+            <div>
+                <span>Data Science</span>
+                <span>28</span>
+            </div>
+            <div>
+                <span>AutoCAD</span>
+                <span>15</span>
+            </div>
+            <div>
+                <span>Computer Science</span>
+                <span>34</span>
+            </div>
+            <div>
+                <span>Meachine Learning</span>
+                <span>22</span>
+            </div>
+            <div>
+                <span>Commerces</span>
+                <span>42</span>
+            </div>
+            <div>
+                <span>journalism</span>
+                <span>31</span>
+            </div>
+        </div>
+    </div>
+ </section>
+
+
+
+<!-------footer--------->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Quae, quisquam autem, culpa similique porro veniam esse
+         tenetur, qui mollitia reiciendis dignissimos. Voluptatibus <br>similique 
+        debitis corrupti laudantium pariatur! Eos, in temporibus!!</p>
+        <div class="icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+        </div>
+          <p>Made with <i class="bi bi-heart"></i> by varshu suriseeti</p>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-------javascript for toggle menu--------> 
+<script>
+    var navBar = document.getElementById("navBar");
+
+    function showmenu(){
+        navBar.style.right = "0";
+    }
+    function hidemenu(){
+        navBar.style.right="-200px";
+    }
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>university</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+ 
+    nav{
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav img{
+        border-radius: 160px;
+        height: 20vh;
+    }
+    .nav-bar{
+        flex: 1;
+        text-align: right;
+    }
+    .nav-bar ul li{
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+    .nav-bar ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 13px;
+        font-family: 'poppins',sans-serif;
+    }
+    .nav-bar ul li::after{
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #f44336;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+    .nav-bar ul li:hover:after{
+    width: 100%;
+    }
+    
+    nav .bi{
+        display: none;
+    }
+    nav .btn-close{
+        display: none;
+    }
+    .bts{
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        border: 2px solid white;
+        padding: 10px 30px;
+        font-size: 15px;
+        background: transparent;
+       position: relative;
+       cursor: pointer;
+     }
+     .bts:hover{
+        border:  2px solid #f44336;
+        background: #f44336;
+        transition: 1s;
+    }
+
+
+    @media(max-width: 700px){
+        .text-box h1{
+            font-size: 20px;
+        }
+        .text-box p{
+            font-size: 10px;
+        }
+        .nav-bar ul li{
+            display: block;
+        }
+        .nav-bar{
+            position:fixed;
+            background: #f44336;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+            transform: 1s;
+        }
+        nav .bi{
+            display: block;
+            color:#fff;
+            margin: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        nav .btn-close{
+            display: block;
+            margin: 10px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+        p{
+            color: #777;
+        }
+        .bts{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 2px solid white;
+            padding: 10px 30px;
+            font-size: 15px;
+            background: transparent;
+           position: relative;
+           cursor: pointer;
+         }
+         .bts:hover{
+            border:  2px solid #f44336;
+            background: #f44336;
+            transition: 1s;
+        }
+    }
+    
+
+ 
+
+
+/*----------footer---------*/
+
+    .footer{
+        width: 100;
+        text-align: center;
+        padding: 30px 0;
+    }
+    .footer h4{
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    .icons .bi{
+        color: #f44336;
+        margin: 0 13px;
+        cursor: pointer;
+        padding: 18px 0;
+    }
+    .bi-heart{
+        color: #f44336;
+    }
+    p{
+        color: #777;
+    }
+
+
+
+/*----------About Us page---------*/
+    .sub-header{
+        height: 50vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(pics/grad.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+    }
+
+    .about{
+        width: 80%;
+        margin: auto;
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+    .about-col{
+        flex-basis: 48%;
+        padding: 30px 2px;
+    }
+    .about-col img{
+        width: 100%;
+    }
+    .about-col h1{
+        padding-top: 0;
+    }
+    .about-col p{
+        padding: 15px 0 25px;
+        color: #777;
+    }
+    .black-bts{
+        border: 2px solid #f44336;
+        background: transparent;
+        color: #f44336;
+    }
+    .black-bts:hover{
+        color: white;
+    }
+    @media(max-width: 700px)
+    {
+        .row{
+            flex-direction: column;
+        }
+    }
+
+  
+   
+
+
+
+</style>
+<body>
+<section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="pics/logo2.jpg" alt="img is reloaded"></a>
+            <div class="nav-bar" id="navBar">
+                <button type="button" class="btn-close" onclick="hidemenu()"></button>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" onclick="showmenu()">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </nav>
+        <h1>About Us</h1>
+
+</section>
+
+
+<!-----------about us content----------->
+
+<section class="about">
+    <div class="row">
+        <div class="about-col">
+            <h1>we are the states largest university</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Laboriosam sint quas, harum sit nulla molestiae veniam repudiandae
+                 animi! Sunt tempore molestiae ipsum cupiditate dolor blanditiis 
+                eveniet facilis fugit exceptur cumque qui id minus doloribus?oluptate
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Sunt laboriosam rerum ut quia quas iste, 
+                facilis eveniet tempora itaque ad?
+            </p>
+            <a href="" class="bts black-bts">EXPLORE NOW</a>
+        </div>
+        <div class="about-col">
+            <img src="pics/about.jpg" alt="">
+        </div>
+    </div>
+    </section>
+    
+    
+
+
+
+<!-------footer--------->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Quae, quisquam autem, culpa similique porro veniam esse
+         tenetur, qui mollitia reiciendis dignissimos. Voluptatibus <br>similique 
+        debitis corrupti laudantium pariatur! Eos, in temporibus!!</p>
+        <div class="icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+        </div>
+          <p>Made with <i class="bi bi-heart"></i> by varshu suriseeti</p>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-------javascript for toggle menu--------> 
+<script>
+    var navBar = document.getElementById("navBar");
+
+    function showmenu(){
+        navBar.style.right = "0";
+    }
+    function hidemenu(){
+        navBar.style.right="-200px";
+    }
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
